@@ -1,0 +1,158 @@
+/* Eye-friendly Text Enhancements */
+
+/* Reduced glow for better readability */
+.test {
+    font-size: 3rem;
+    color: #3498db;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    margin: 20px 0;
+}
+
+.test p {
+    width: auto;
+    min-height: 1.2em;
+    text-wrap: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #3498db;
+    animation: cursorBlink 1.5s infinite;
+}
+
+/* Subtle navigation effects */
+.nav_menu_icon {
+    filter: drop-shadow(0 0 2px rgba(52, 152, 219, 0.3));
+    transition: all 0.3s ease;
+}
+
+.nav_menu_icon:hover {
+    filter: drop-shadow(0 0 5px rgba(52, 152, 219, 0.5));
+    transform: scale(1.05);
+}
+
+/* Text enhancements with reduced glow */
+.olivia_moswa {
+    background: linear-gradient(45deg, #3498db, #2980b9, #27ae60);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+.passionate {
+    color: #bdc3c7;
+    line-height: 1.6;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+/* Subtle profile image effects */
+.olivia-img {
+    border: 2px solid #3498db;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 15px rgba(52, 152, 219, 0.3),
+        inset 0 0 15px rgba(52, 152, 219, 0.05);
+    transition: all 0.3s ease;
+}
+
+.olivia-img:hover {
+    transform: scale(1.03);
+    box-shadow: 
+        0 0 25px rgba(52, 152, 219, 0.4),
+        inset 0 0 25px rgba(52, 152, 219, 0.1);
+}
+
+/* Comfortable button styling */
+.hire_me {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(52, 152, 219, 0.2);
+}
+
+.hire_me:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 5px 20px rgba(52, 152, 219, 0.3),
+        0 0 30px rgba(52, 152, 219, 0.1);
+}
+
+/* Reduced skills glow */
+.figma {
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 3px rgba(52, 152, 219, 0.2));
+}
+
+.figma:hover {
+    transform: scale(1.05) rotate(3deg);
+    filter: drop-shadow(0 0 8px rgba(52, 152, 219, 0.4));
+}
+
+/* Comfortable intro text */
+.intro {
+    color: #3498db;
+    text-shadow: 
+        0 0 5px rgba(52, 152, 219, 0.3),
+        0 0 10px rgba(52, 152, 219, 0.2);
+}
+
+/* Soft moswa gradient */
+.moswa {
+    background: linear-gradient(45deg, #3498db, #27ae60, #2980b9, #16a085, #2c3e50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: softGradientShift 4s ease-in-out infinite;
+}
+
+@keyframes softGradientShift {
+    0%, 100% { 
+        background: linear-gradient(45deg, #3498db, #27ae60, #2980b9, #16a085, #2c3e50);
+        -webkit-background-clip: text;
+    }
+    50% { 
+        background: linear-gradient(45deg, #27ae60, #2980b9, #16a085, #2c3e50, #3498db);
+        -webkit-background-clip: text;
+    }
+}
+
+/* Enhanced Subject Text with subtle glow */
+.subject {
+    color: #3498db;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+    transition: all 0.3s ease;
+}
+
+.subject:hover {
+    text-shadow: 0 0 10px rgba(52, 152, 219, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Comfortable card effects */
+.card_section:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 10px 25px rgba(52, 152, 219, 0.15),
+        0 0 30px rgba(52, 152, 219, 0.05);
+}
+
+/* Subtle progress circle */
+.circlechart::after {
+    color: #3498db;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Comfortable cursor blink */
+@keyframes cursorBlink {
+    0%, 50% { border-color: #3498db; }
+    51%, 100% { border-color: transparent; }
+}

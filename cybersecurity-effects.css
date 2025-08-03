@@ -1,0 +1,895 @@
+/* Cybersecurity 3D Effects and Advanced Animations */
+
+/* Enhanced Canvas Background */
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: radial-gradient(ellipse at center, #0f1419 0%, #000508 100%);
+}
+
+/* Matrix Rain Canvas */
+#matrix-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+/* Enhanced Body Background */
+body {
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 150, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(255, 0, 150, 0.1) 0%, transparent 50%),
+        linear-gradient(135deg, #000000 0%, #0c1776 50%, #000814 100%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* 3D Cybersecurity Robot Styles - Realistic Design */
+.cyber-robot-container {
+    perspective: 1200px;
+    perspective-origin: center bottom;
+    transition: all 0.3s ease;
+}
+
+.cyber-robot {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: robotFloat 6s ease-in-out infinite;
+    transform: rotateX(15deg) rotateY(-10deg);
+}
+
+.robot-shadow {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 20px;
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: shadowFloat 6s ease-in-out infinite;
+}
+
+/* Head - 3D Structure */
+.robot-head {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 5px;
+    transform-style: preserve-3d;
+}
+
+.head-top, .head-front, .head-left, .head-right {
+    position: absolute;
+    background: linear-gradient(145deg, #2c3e50, #34495e);
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.head-front {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    transform: translateZ(25px);
+    box-shadow: 
+        inset 0 0 15px rgba(52, 152, 219, 0.1),
+        0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.head-top {
+    width: 70px;
+    height: 50px;
+    border-radius: 12px 12px 0 0;
+    transform: rotateX(90deg) translateZ(35px);
+    background: linear-gradient(145deg, #34495e, #2c3e50);
+}
+
+.head-left {
+    width: 50px;
+    height: 70px;
+    border-radius: 0 0 0 12px;
+    transform: rotateY(-90deg) translateZ(35px);
+    background: linear-gradient(145deg, #1e2831, #2c3e50);
+}
+
+.head-right {
+    width: 50px;
+    height: 70px;
+    border-radius: 0 0 12px 0;
+    transform: rotateY(90deg) translateZ(35px);
+    background: linear-gradient(145deg, #1e2831, #2c3e50);
+}
+
+/* Enhanced Antenna */
+.robot-antenna {
+    position: absolute;
+    width: 3px;
+    height: 15px;
+    background: linear-gradient(to top, #3498db, #2980b9);
+    left: 50%;
+    top: -15px;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.antenna-light {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #e74c3c;
+    border-radius: 50%;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: antennaFlash 3s ease-in-out infinite;
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.5);
+}
+
+/* Enhanced Eyes */
+.robot-eyes {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 10px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.eye {
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(145deg, #ecf0f1, #bdc3c7);
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid rgba(52, 152, 219, 0.4);
+    overflow: hidden;
+    box-shadow: 
+        inset 0 0 8px rgba(0, 0, 0, 0.2),
+        0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.eye-socket {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+}
+
+.pupil {
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #2c3e50, #000);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.eye-highlight {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    top: 25%;
+    left: 30%;
+    pointer-events: none;
+}
+
+/* Enhanced Mouth */
+.robot-mouth {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.mouth-speaker {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1px;
+}
+
+.speaker-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #3498db, transparent);
+    animation: speakerPulse 2s ease-in-out infinite;
+}
+
+.speaker-line:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.speaker-line:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Neck */
+.robot-neck {
+    width: 20px;
+    height: 8px;
+    background: linear-gradient(145deg, #34495e, #2c3e50);
+    margin: 0 auto;
+    border-radius: 4px;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    transform: translateZ(10px);
+}
+
+/* Enhanced Body - 3D */
+.robot-body {
+    position: relative;
+    width: 85px;
+    height: 100px;
+    margin: 5px auto;
+    transform-style: preserve-3d;
+}
+
+.body-front, .body-left, .body-right {
+    position: absolute;
+    background: linear-gradient(145deg, #2c3e50, #34495e);
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.body-front {
+    width: 85px;
+    height: 100px;
+    border-radius: 15px;
+    transform: translateZ(30px);
+    box-shadow: 
+        inset 0 0 20px rgba(52, 152, 219, 0.1),
+        0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.body-left {
+    width: 60px;
+    height: 100px;
+    border-radius: 0 0 0 15px;
+    transform: rotateY(-90deg) translateZ(42px);
+    background: linear-gradient(145deg, #1e2831, #2c3e50);
+}
+
+.body-right {
+    width: 60px;
+    height: 100px;
+    border-radius: 0 0 15px 0;
+    transform: rotateY(90deg) translateZ(42px);
+    background: linear-gradient(145deg, #1e2831, #2c3e50);
+}
+
+/* Enhanced Chest Panel */
+.chest-panel {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55px;
+    height: 70px;
+    background: linear-gradient(145deg, rgba(52, 152, 219, 0.1), rgba(41, 128, 185, 0.1));
+    border-radius: 8px;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px;
+    box-shadow: inset 0 0 10px rgba(52, 152, 219, 0.1);
+}
+
+.security-badge {
+    font-size: 20px;
+    filter: drop-shadow(0 0 3px rgba(52, 152, 219, 0.5));
+    animation: badgeGlow 4s ease-in-out infinite alternate;
+}
+
+.status-lights {
+    display: flex;
+    gap: 6px;
+}
+
+.status-light {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    animation: statusBlink 2s ease-in-out infinite;
+    box-shadow: 0 0 4px currentColor;
+}
+
+.status-light.green {
+    background: #27ae60;
+    color: #27ae60;
+}
+
+.status-light.blue {
+    background: #3498db;
+    color: #3498db;
+    animation-delay: 0.7s;
+}
+
+.status-light.orange {
+    background: #f39c12;
+    color: #f39c12;
+    animation-delay: 1.4s;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.button {
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(145deg, #34495e, #2c3e50);
+    border-radius: 2px;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Arms - 3D */
+.robot-arms {
+    position: absolute;
+    top: 140px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.arm {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.arm-upper {
+    width: 12px;
+    height: 35px;
+    background: linear-gradient(145deg, #34495e, #2c3e50);
+    border-radius: 6px;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.arm-joint {
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #3498db, #2980b9);
+    border-radius: 50%;
+    margin: 2px auto;
+    border: 1px solid rgba(52, 152, 219, 0.5);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.arm-lower {
+    width: 10px;
+    height: 25px;
+    background: linear-gradient(145deg, #2c3e50, #1e2831);
+    border-radius: 5px;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    margin: 0 auto;
+}
+
+.arm-hand {
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(145deg, #3498db, #2980b9);
+    border-radius: 2px;
+    margin: 2px auto;
+    border: 1px solid rgba(52, 152, 219, 0.5);
+    box-shadow: 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+.left-arm {
+    transform: rotate(-10deg);
+    animation: leftArmMove 8s ease-in-out infinite;
+}
+
+.right-arm {
+    transform: rotate(10deg);
+    animation: rightArmMove 8s ease-in-out infinite;
+}
+
+/* Legs */
+.robot-legs {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.leg {
+    width: 15px;
+    height: 30px;
+    background: linear-gradient(145deg, #34495e, #2c3e50);
+    border-radius: 0 0 8px 8px;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.leg::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 6px;
+    background: linear-gradient(145deg, #2c3e50, #1e2831);
+    border-radius: 10px;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+/* Robot Animations - Smooth and Realistic */
+@keyframes robotFloat {
+    0%, 100% { 
+        transform: rotateX(15deg) rotateY(-10deg) translateY(0px);
+    }
+    25% { 
+        transform: rotateX(15deg) rotateY(-5deg) translateY(-3px);
+    }
+    50% { 
+        transform: rotateX(15deg) rotateY(0deg) translateY(-5px);
+    }
+    75% { 
+        transform: rotateX(15deg) rotateY(-5deg) translateY(-3px);
+    }
+}
+
+@keyframes shadowFloat {
+    0%, 100% { 
+        transform: translateX(-50%) scale(1);
+        opacity: 0.3;
+    }
+    50% { 
+        transform: translateX(-50%) scale(1.1);
+        opacity: 0.2;
+    }
+}
+
+@keyframes antennaFlash {
+    0%, 80%, 100% { 
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+        background: #e74c3c;
+    }
+    10%, 70% { 
+        opacity: 0.5;
+        transform: translateX(-50%) scale(1.1);
+        background: #3498db;
+    }
+}
+
+@keyframes speakerPulse {
+    0%, 100% { 
+        opacity: 0.3;
+        transform: scaleX(1);
+    }
+    50% { 
+        opacity: 1;
+        transform: scaleX(1.2);
+    }
+}
+
+@keyframes badgeGlow {
+    0% { 
+        filter: drop-shadow(0 0 2px rgba(52, 152, 219, 0.3));
+        transform: scale(1);
+    }
+    100% { 
+        filter: drop-shadow(0 0 6px rgba(52, 152, 219, 0.6));
+        transform: scale(1.05);
+    }
+}
+
+@keyframes statusBlink {
+    0%, 90%, 100% { 
+        opacity: 1;
+        transform: scale(1);
+    }
+    5%, 85% { 
+        opacity: 0.3;
+        transform: scale(0.9);
+    }
+}
+
+@keyframes leftArmMove {
+    0%, 100% { 
+        transform: rotate(-10deg);
+    }
+    25% { 
+        transform: rotate(-15deg);
+    }
+    50% { 
+        transform: rotate(-5deg);
+    }
+    75% { 
+        transform: rotate(-12deg);
+    }
+}
+
+@keyframes rightArmMove {
+    0%, 100% { 
+        transform: rotate(10deg);
+    }
+    25% { 
+        transform: rotate(5deg);
+    }
+    50% { 
+        transform: rotate(15deg);
+    }
+    75% { 
+        transform: rotate(12deg);
+    }
+}
+
+@keyframes robotExcited {
+    0%, 100% { 
+        transform: rotateX(15deg) rotateY(-10deg) translateY(0px) scale(1);
+    }
+    25% { 
+        transform: rotateX(10deg) rotateY(5deg) translateY(-8px) scale(1.02);
+    }
+    50% { 
+        transform: rotateX(20deg) rotateY(-15deg) translateY(-12px) scale(1.05);
+    }
+    75% { 
+        transform: rotateX(12deg) rotateY(8deg) translateY(-6px) scale(1.02);
+    }
+}
+
+@keyframes soundWaveExpand {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
+
+/* Enhanced Typing Animation */
+.test {
+    font-size: 3rem;
+    color: #00ffff;
+    font-weight: 700;
+    text-shadow: 
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 30px #00ffff;
+    margin: 20px 0;
+}
+
+.test p {
+    width: auto;
+    min-height: 1.2em;
+    text-wrap: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #00ffff;
+    animation: cursorBlink 1s infinite;
+}
+
+/* Floating Cyber Elements */
+.floating-cyber-element {
+    animation: float-across 8s linear infinite;
+    filter: drop-shadow(0 0 10px currentColor);
+}
+
+@keyframes float-across {
+    0% {
+        transform: translateX(-50px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(calc(100vw + 50px)) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes shieldPulse {
+    0%, 100% { 
+        opacity: 0.6;
+        transform: scale(1) translateZ(var(--z-offset, 0));
+    }
+    50% { 
+        opacity: 1;
+        transform: scale(1.1) translateZ(var(--z-offset, 0));
+    }
+}
+
+@keyframes lockFloat {
+    0%, 100% { transform: translate(-50%, -50%) translateZ(30px) translateY(0px); }
+    50% { transform: translate(-50%, -50%) translateZ(30px) translateY(-10px); }
+}
+
+@keyframes streamFlow {
+    0% { 
+        top: -100px;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% { 
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes cursorBlink {
+    0%, 50% { border-color: #00ffff; }
+    51%, 100% { border-color: transparent; }
+}
+
+/* Enhanced Navigation Icons with Cyber Effect */
+.nav_menu_icon {
+    filter: drop-shadow(0 0 5px #00ffff);
+    transition: all 0.3s ease;
+}
+
+.nav_menu_icon:hover {
+    filter: drop-shadow(0 0 15px #00ffff);
+    transform: scale(1.1);
+}
+
+/* Cyber Glow Effects for Cards */
+.card_section {
+    position: relative;
+    overflow: hidden;
+}
+
+.card_section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg at 50% 50%,
+        transparent 0deg,
+        rgba(0, 255, 255, 0.1) 90deg,
+        transparent 180deg,
+        rgba(0, 150, 255, 0.1) 270deg,
+        transparent 360deg
+    );
+    animation: rotateGlow 10s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotateGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Enhanced Skills Section */
+.skill_circle_main {
+    position: relative;
+}
+
+.skill_circle {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.skill_circle:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.skill_circle::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #00ffff, #0088ff, #00ffff);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill_circle:hover::before {
+    opacity: 0.3;
+}
+
+/* Advanced Loading Animation */
+#loader svg text {
+    font-family: 'Courier New', monospace;
+    font-size: 48px;
+    font-weight: bold;
+    fill: none;
+    stroke: #00ffff;
+    stroke-width: 2;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: 
+        textLoad 3s ease-in-out infinite,
+        textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textLoad {
+    0% {
+        stroke-dashoffset: 200;
+        opacity: 0;
+    }
+    50% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+    100% {
+        stroke-dashoffset: -200;
+        opacity: 0;
+    }
+}
+
+@keyframes textGlow {
+    0% {
+        filter: drop-shadow(0 0 5px #00ffff);
+    }
+    100% {
+        filter: drop-shadow(0 0 20px #00ffff) drop-shadow(0 0 30px #0088ff);
+    }
+}
+
+/* Cyber Grid Background Pattern */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -3;
+    pointer-events: none;
+}
+
+/* Responsive Design for 3D Robot */
+@media (max-width: 768px) {
+    .cyber-robot-container {
+        width: 150px;
+        height: 200px;
+        bottom: 20px;
+        right: 15px;
+    }
+    
+    .robot-head {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .head-front, .head-top {
+        width: 55px;
+    }
+    
+    .head-front {
+        height: 55px;
+    }
+    
+    .head-top {
+        height: 40px;
+    }
+    
+    .robot-body {
+        width: 65px;
+        height: 80px;
+    }
+    
+    .body-front {
+        width: 65px;
+        height: 80px;
+    }
+    
+    .robot-eyes {
+        padding: 8px 6px 0;
+    }
+    
+    .eye {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .pupil {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .security-badge {
+        font-size: 16px;
+    }
+    
+    .chest-panel {
+        width: 45px;
+        height: 55px;
+        padding: 6px;
+    }
+    
+    .test {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cyber-robot-container {
+        display: none !important;
+    }
+    
+    .test {
+        font-size: 1.5rem;
+    }
+}
+
+/* Additional Cyber Security Visual Elements */
+.security-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #00ffff;
+    border-radius: 50%;
+    animation: particleMove 10s linear infinite;
+}
+
+@keyframes particleMove {
+    0% {
+        transform: translateY(100vh) translateX(0) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) translateX(100px) scale(0);
+        opacity: 0;
+    }
+}

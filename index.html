@@ -1,0 +1,482 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yousef khalaf</title>
+    <meta name="description" content="Yousef Khalaf is a cybersecurity expert and practical researcher specializing in offensive and defensive security, malware analysis, and threat detection.">
+    <meta name="keywords" content="Yousef Khalaf, Cybersecurity, Offensive Security, Malware Analysis, Threat Detection, CTF, Cybersecurity Research, SOC, Red Team, Blue Team, Ethical Hacking">
+    <meta name="author" content="Yousef Khalaf">
+  
+  <!-- Open Graph tags for better sharing & SEO -->
+    <meta property="og:title" content="Yousef Khalaf - Cybersecurity Expert">
+    <meta property="og:description" content="Practical cybersecurity researcher focused on offensive security, SOC, and cyber threat analysis.">
+    
+    <meta name="author" content="yousef khalaf">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="logo1.jpeg">
+    <link href="./assets/images/profile-pic.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="swap.css">
+    <link rel="stylesheet" href="boostrap.min.css">
+    <link rel="stylesheet" href="magnific-popup.min.css">
+    <link rel="stylesheet" href="slick.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media_query.css">
+    <link rel="stylesheet" href="cybersecurity-effects.css">
+    <link rel="stylesheet" href="final-enhancements.css">
+    <link rel="stylesheet" href="eye-friendly.css">
+    
+    <!-- Enhanced fonts for better typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Enhanced preloader text animation */
+        #loader svg text {
+            animation: 
+                textStroke 3s ease-in-out infinite,
+                textGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes textStroke {
+            0% {
+                stroke-dashoffset: 400;
+                opacity: 0;
+            }
+            50% {
+                stroke-dashoffset: 0;
+                opacity: 1;
+            }
+            100% {
+                stroke-dashoffset: -400;
+                opacity: 0;
+            }
+        }
+        
+        /* Enhanced Typography for Subtitle Text */
+        .passionate {
+            font-family: 'Inter', 'Poppins', sans-serif !important;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.8;
+            letter-spacing: 0.3px;
+            color: #e0e0e0;
+            text-align: justify;
+            margin-bottom: 25px;
+        }
+        
+        .passionate strong {
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 600;
+            color: #00ffff;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .passionate strong:hover {
+            color: #00ff88;
+            text-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
+        }
+        
+        /* Better paragraph spacing and styling */
+        .passionate br + br {
+            line-height: 2.5;
+        }
+        
+        /* Enhanced readability for long text */
+        .passionate {
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(1px);
+        }
+        
+        /* Responsive text sizing */
+        @media (max-width: 768px) {
+            .passionate {
+                font-size: 15px;
+                line-height: 1.7;
+                letter-spacing: 0.2px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .passionate {
+                font-size: 14px;
+                line-height: 1.6;
+                letter-spacing: 0.1px;
+            }
+        }
+        
+        /* Special styling for technical expertise list */
+        .expertise-list {
+            margin-top: 20px;
+        }
+        
+        .expertise-list strong {
+            display: inline-block;
+            margin-bottom: 8px;
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 600;
+            color: #00ff88;
+            text-shadow: 0 0 6px rgba(0, 255, 136, 0.4);
+        }
+        
+        .expertise-description {
+            color: #b8b8b8;
+            font-weight: 300;
+            margin-left: 10px;
+        }
+        
+        /* Enhanced university and education text */
+        .university, .bachelor {
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Smooth text animations */
+        .passionate {
+            animation: fadeInText 0.8s ease-in-out;
+        }
+        
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Better text contrast */
+        .passionate {
+            background: linear-gradient(135deg, rgba(0, 20, 40, 0.1) 0%, rgba(0, 40, 80, 0.05) 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 3px solid rgba(0, 255, 255, 0.3);
+            margin: 15px 0;
+        }
+        
+        /* Cyber security themed improvements */
+        .olivia_bio {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .bio_contain {
+            background: rgba(0, 20, 40, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .download_cv {
+            background: linear-gradient(45deg, #0088ff, #00ffff);
+            border: none;
+            color: #000;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+        
+        .download_cv:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 30px rgba(0, 255, 255, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ====================================== Preloader ===================================== -->
+    <div class="wrapper">
+        <div id="loader-wrapper">
+            <div id="loader">
+                <svg viewBox="0 0 1320 300">
+                    <text x="50%" y="50%" dy=".35em" text-anchor="middle">0xd3f4lt</text>
+                </svg>
+            </div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+    </div>
+    <!-- ====================================== Preloader End ===================================== -->
+    <!-- ====================================== Background Animation ===================================== -->
+        <canvas id="canvas"></canvas>
+        <div class="security-particles" id="security-particles"></div>
+    <!-- ====================================== Background Animation End ===================================== -->
+
+    <!-- ====================================== Dark Light Mode ===================================== -->
+    <div class="dark_toggle">
+        <div class="ul-header">
+            <a class="mode" onclick="myFunction()" title="Toggle Mode">
+                <div class="icon-container">
+                    <i id="sunIcon" class="fa-solid fa-sun fa-spin icon"></i>
+                    <i id="moonIcon" class="fa-solid fa-moon icon hidden"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- ====================================== Dark Light Mode End===================================== -->
+    <header>
+        <!-- ====================================== Fix Icon Menu ===================================== -->
+        <div class="sidebar close">
+            <ul class="nav-links icetab-container" id="icetab-container">
+                <li class="icetab current-tab">
+                    <a class="nav_menu_icon_line" href="javascript:void(0)">
+                        <img class="nav_menu_icon" src="home_icon.svg" alt="home_icon">
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li class=""><a class="link_name" href="javascript:void(0)">Home</a></li>
+                    </ul>
+                </li>
+                <li class="icetab menu-btn">
+                    <a class="nav_menu_icon_line" href="javascript:void(0)">
+                        <img class="nav_menu_icon" src="about_icon.svg" alt="about_icon">
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a class="link_name" href="javascript:void(0)">About Me</a></li>
+                    </ul>
+                </li>
+                <li class="icetab">
+                    <a class="nav_menu_icon_line" href="javascript:void(0)">
+                        <img class="nav_menu_icon" src="resume_icon.svg" alt="resume_icon">
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a class="link_name" href="javascript:void(0)">Education</a></li>
+                    </ul>
+                </li>
+                <li class="icetab">
+                    <a class="nav_menu_icon_line" href="javascript:void(0)">
+                        <img class="nav_menu_icon" src="skills_icon.svg" alt="Skills_icon">
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="javascript:void(0)">Skills</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- ====================================== Fix Icon Menu End ===================================== -->
+        <!-- ======================================= Side Menu ================================== -->
+        <div class="toggle" onclick="openNav()">
+            <img class="line-menu" src="line-menu.png" alt="line-menu">
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <div class="closebtn" onclick="closeNav()">x</div>
+            <img class="logo" src="1730478357444.png" alt="logo">
+            <ul class="sidescreen_sub icetab-container" id="icetab-container2">
+                <li class="icetab current-tab" onclick="openNav()">
+                    <a class="icons2" href="javascript:void(0)">
+                        <img class="nav_menu_icon sidenav_img" src="home_icon.svg" alt="home_icon">Home
+                    </a>
+                </li>
+                <li class="icetab" onclick="openNav()">
+                    <a class="icons2" href="javascript:void(0)">
+                        <img class="nav_menu_icon sidenav_img" src="about_icon.svg" alt="about_icon">About Me
+                    </a>
+                </li>
+                <li class="icetab" onclick="openNav()">
+                    <a class="icons2" href="javascript:void(0)">
+                        <img class="nav_menu_icon sidenav_img" src="resume_icon.svg" alt="resume_icon">Education
+                    </a>
+                </li>
+                <li class="icetab" onclick="openNav()">
+                    <a class="icons2" href="javascript:void(0)">
+                        <img class="nav_menu_icon sidenav_img" src="skills_icon.svg" alt="Skills_icon">Skills
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- ======================================= Side Menu End ================================== -->
+    </header>
+    <div class="all_page" id="page">
+        <section class="card_section" id="card_main">
+            <div class="olivia_bio" id="oliva_details">
+                <div class="imgBox">
+                    <img class="olivia-img" src="Yousef.jpeg" alt="me-img">
+                </div>
+                <div class="bio_contain">
+                    <h1 class="olivia_moswa">Yousef Khalaf</h1>
+                    <h2 class="designer font_w_font_s1 overflow-hidden"></h2>
+                    <a href="Yousef Khalaf.pdf"><button class="download_cv hire_me font_w_font_s">
+                        <i class="ri-at-line"></i> Download CV
+                    </button></a>
+                </div>
+            </div>
+            <div class="right_card_main icetab-content" id="icetab-content">
+                <!-- ======================================= Home Section ================================== -->
+                <section class="oliva-intro tabcontent tab-active" id="home">
+                    <div class="intro_main">
+                        <h2 class="intro font_w_font_s fade_up">intro</h2>
+                    </div>
+                    <div class="test">
+                        <span style="color: #00ffff;">Cyber Security Expert & </span>
+                        <p style="color: #00ff88;"></p>
+                    </div>
+                    <h3 class="passionate font_w_font_s1 fade_up">
+                        Hello, My Name Is Yousef Khalaf 
+                        <br><br>
+                        I'm Fresh graduate <strong>Cyber Security</strong> at Zarqa University, where I'm developing deep expertise in protecting digital assets and infrastructure.
+                        <br><br>
+                        Passionate about ethical hacking, threat analysis, and building secure systems that protect against evolving cyber threats.
+                        <br><br>
+                        Always eager to learn new security techniques and stay ahead of the latest cybersecurity trends and technologies.
+                    </h3>
+                    <div class="button_circle_group">
+                        <div>
+                        </div>
+                        <div class="circular_text_main ">
+
+                            
+                        </div>
+                        
+                    </div>
+   
+                </section>
+                <!-- ======================================= About Section ================================== -->
+                <section class="oliva-intro tabcontent" id="about">
+                    <div class="intro_main">
+                        <h2 class="intro font_w_font_s fade_up">About Me</h2>
+                    </div>
+                    <h2 class="moswa font_w_font_s fade_up">🛡️ CyberSecurity Expert & Ethical Hacker 🔐</h2>
+                    <h3 class="passionate font_w_font_s1 fade_up">
+                        In the dynamic field of cyber-security, I have distinguished myself by ranking <strong>1st in CTF competitions</strong> at Zarqa University for two consecutive years. 
+                        Additionally, I achieved <strong>top 9% ranking on the TryHackMe platform</strong> globally. 
+                        My specialized areas of expertise include:
+                        <br><br>
+                        <div class="expertise-list">
+                            <strong>DFIR (Digital Forensics & Incident Response)</strong><span class="expertise-description"> - Investigating security breaches and analyzing digital evidence</span>
+                            <br>
+                            <strong>OSINT (Open Source Intelligence)</strong><span class="expertise-description"> - Gathering actionable intelligence from publicly available sources</span>  
+                            <br>
+                            <strong>Cryptanalysis</strong><span class="expertise-description"> - Breaking encryption and analyzing cryptographic systems</span>
+                            <br>
+                            <strong>SOC Operations</strong><span class="expertise-description"> - Monitoring, detecting, and responding to security threats</span>
+                            <br>
+                            <strong>CTF Competitions</strong><span class="expertise-description"> - Solving complex cybersecurity challenges and puzzles</span>
+                        </div>
+                    </h3>
+                    <div class="about_counter fade_up">
+                        <div class="counter">
+                            <h3 class="counter2 count font_w_font_s" data-count="2">1+</h3>
+                            <h3 class="experince font_w_font_s1 ">YEARS OF EXPERIENCE</h3>
+                        </div>
+                    </div>
+                </section>
+                <!-- ======================================= Education Section ================================== -->
+                <section class="oliva-intro tabcontent" id="resume">
+                    <div class="intro_main">
+                        <h2 class="intro font_w_font_s fade_up">Education</h2>
+                    </div>
+                    <div class="education position-relative">
+                        <div class="side_circle_ring fade_up">
+                            <div class="small_yellow_border">
+                                <div class="small_yellow_circle"></div>
+                            </div>
+                        </div>
+                        <div class="small_yellow_border_main fade_up">
+                            <h3 class="bachelor font_w_font_s1">Bachelor of Cyber Security</h3>
+                            <h4 class="university font_w_font_s1">Zarqa University / 2021 - 2025</h4>
+                            <p style="color: #00ffff; margin-top: 10px; font-size: 15px; font-family: 'Inter', sans-serif; line-height: 1.6; letter-spacing: 0.3px;">
+                                Comprehensive study of <strong style="color: #00ff88;">network security</strong>, <strong style="color: #00ff88;">cryptography</strong>, <strong style="color: #00ff88;">digital forensics</strong>, 
+                                and <strong style="color: #00ff88;">cyber threat intelligence</strong> with hands-on experience in security tools and methodologies.
+                            </p>
+                        </div>
+                    </div>
+                </section>                        
+                <!-- ======================================= Skills Section ================================== -->
+                <section class="oliva-intro tabcontent" id="skill">
+                    <div class="intro_main">
+                        <h2 class="intro font_w_font_s fade_up">my Skills</h2>
+                    </div>
+                    <h2 class="moswa font_w_font_s fade_up">My Skills</h2>
+                    <div class="skill_circle_main">
+                        <div>
+                            <div class="circlechart" data-percentage="90"></div>
+                            <h2 class="subject">Communication</h2>
+                        </div>
+                        <div>
+                            <div class="circlechart" data-percentage="75"></div>
+                            <h2 class="subject">Problem solving</h2>
+                        </div>
+                        <div>
+                            <div class="circlechart" data-percentage="80"></div>
+                            <h2 class="subject">Presentation</h2>
+                        </div>
+                        <div>
+                            <div class="circlechart" data-percentage="85"></div>
+                            <h2 class="subject">Time management </h2>
+                        </div>
+                    </div>
+                    <br>
+                    <h2 class="moswa font_w_font_s fade_up">Professional Skills</h2>
+                    <div class="skill_circle_main">
+                        <div class="skill_circle fade_up">
+                            <div class="hard_skill_group">
+                                <img class="figma" src="23.png" alt="Python">
+                                
+                            </div>
+                            <h4 class="subject font_w_font_s1">Python</h4>
+                        </div>
+                        <div class="skill_circle fade_up">
+                            <div class="hard_skill_group">
+                                <img class="figma" src="25.png" alt="Windows OS">
+                                
+                            </div>
+                            <h4 class="subject font_w_font_s1">Windows OS</h4>
+                        </div>
+                        <div class="skill_circle fade_up">
+                            <div class="hard_skill_group">
+                                <img class="figma" src="26.png" alt="Linux OS">
+                                
+                            </div>
+                            <h4 class="subject font_w_font_s1">Linux OS</h4>
+                        </div>
+                        <div class="skill_circle fade_up">
+                            <div class="hard_skill_group">
+                                <img class="figma" src="7.png" alt="Virtual Machines">
+                                
+                            </div>
+                            <h4 class="subject font_w_font_s1">VM</h4>
+                        </div>
+                        <div class="skill_circle fade_up">
+                            <div class="hard_skill_group">
+                                <img class="figma" src="21.png" alt="HTML CSS JS">
+                                
+                            </div>
+                            <h4 class="subject font_w_font_s1">HTML CSS JS</h4>
+                        </div>
+                        <div class="skill_circle fade_up">
+                            <div class="hard_skill_group">
+                                <img class="figma" src="16.png" alt="Network">
+                                
+                            </div>
+                            <h4 class="subject font_w_font_s1">Network</h4>
+                        </div>
+                        <div class="skill_circle fade_up">
+                            <div class="hard_skill_group">
+                                <img class="figma" src="17.png" alt="Digital Forensics">
+                                
+                            </div>
+                            <h4 class="subject font_w_font_s1">DFIR</h4>
+                        </div>
+                    </div>
+                </section>
+                <!-- ======================================= Testimonials Section End ================================== -->
+                <!-- ======================================= Contact us Section End ================================== -->
+            </div>
+        </section>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="magnific-popup.min.js"></script>
+    <script src="progresscircle.js"></script>
+    <script src="cursor.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="cybersecurity-3d.js"></script>
+    <script src="dot_particle.js"></script>
+    <script src="slick.min.js"></script>
+    <script src="script.js"></script>
+
+</body></html>
